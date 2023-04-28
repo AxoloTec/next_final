@@ -1,0 +1,13 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+
+    /* set a height for the container */
+}
+
+.pagina {
+    width: 100%;
+    height: 100%;
+}

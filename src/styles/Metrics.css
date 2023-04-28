@@ -1,0 +1,100 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    text-align: left;
+    font-family: "Arial";
+    font-size: 30px;
+    color: black;
+  }
+
+  body {
+    font-family: Arial;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    /* fondo de otra carta (no menu) */
+
+  }
+
+  option {
+    font-family: "Arial";
+    font-size: 15px;
+    color: black;
+  }
+
+  .tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #0c0c0c;
+    border-top: none;
+    font-size: 15px;
+    color: black;
+  }
+
+
+  /*Tabla donde tiene las fechas del yaml*/
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    color: black;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  /*   .table2 {
+  }
+
+  .img {}
+ */
+
+  /*Footer*/
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
+  .table2 {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .td2 {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1px;
+    font-size: 15px;
+    color: black;
+  }
+
+  .th2 {
+    text-align: center;
+    padding: 7px;
+    color: black;
+  }
+
+  .vertical-menu {
+    width: 200px;
+    height: 150px;
+    overflow-y: auto;
+    border: 1.5px solid black;
+  }

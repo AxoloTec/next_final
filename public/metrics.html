@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+/*Tabla donde tiene las fechas del yaml*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+/*Footer*/
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+.table2 {
+  border-collapse: collapse;
+  width: 100%;
+}
+.td2 {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1px;
+  font-size: 15px;
+}
+.th2 {
+  text-align: center;
+  padding: 7px;
+}
+
+.vertical-menu {
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+  border: 1.5px solid black;
+}
+
+</style>
+</head>
+<body>
+<!--Para el contenido de las opciones del menú -->
+    <div class="main">
+        <!--Contenido del METRIC LIST -->
+        <div id="MetricsList" class="tabcontent"> 
+            <h1>Metric List</h1><hr>
+  <script>
+//Opciones
+    var OpcionYaml = {
+        "Front-end": {
+            "HTML": ["Links", "Images", "Tables", "Lists"],
+            "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+            "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]    
+        },
+        
+        "Back-end": {
+            "PHP": ["Variables", "Strings", "Arrays"],
+            "SQL": ["SELECT", "UPDATE", "DELETE"]
+        }
+    }
+    window.onload = function() {
+        var subjectSel = document.getElementById("subject");
+            for (var x in OpcionYaml) {
+                subjectSel.options[subjectSel.options.length] = new Option(x, x);
+            }  
+        subjectSel.onchange = function() {
+        //empty Chapters- and Topics- dropdowns
+        chapterSel.length = 1;
+        topicSel.length = 1;
+        //display correct values
+            for (var y in OpcionYaml[this.value]) {
+            topicSel.options[topicSel.options.length] = new Option(y, y);
+            }
+        }
+        topicSel.onchange = function() {
+        //empty Chapters dropdown
+        chapterSel.length = 1;
+        //display correct values
+            var z = OpcionYaml[subjectSel.value][this.value];
+                for (var i = 0; i < z.length; i++) {
+                chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+                }
+        }
+    }
+</script>
+
+<!--Boton para selecionar el YAML-->
+<select name="subject" id="subject">
+    <option value="" selected="selected">Select the service method</option>
+</select> 
+<br><br><br>
+  
+<!-- AQUI DEBE DE IR LA IMAGEN Y LA TABLA-->
+<!--AQUI LO VAMOS ACOMODANDO-->
+<div class="flex-row">
+	<!--IMAGEN FAKE DONDE TIENE QUE IR L GRÁFICA-->
+<img src="https://www.wikihow.com/images/3/39/Make-a-Line-Graph-in-Microsoft-Excel-Step-12-Version-2.jpg" height="180" width="290" align="top-left">
+
+    <div class="vertical-menu">
+        <table class="table2">
+          <tr><th class="th2"> Week 1</th></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 1</p></td></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 2</p></td></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 3</p></td></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 4</p></td></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 5</p></td></tr>
+          <tr><td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Week 6</p></td></tr>
+        </table>
+    </div>
+</div> 
+
+<br>  
+
+<!--Tabla donde aparece la fecha de cada yaml -->
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>bla bla bla</th>
+    <th>Offical</th>
+  </tr>
+  <tr>
+    <td>Jess</td>
+    <td>es la </td>
+    <td>best</td>
+  </tr>
+</table>
+        </div>
+<!--Aquí va la función para que la opcion elegida -->
+        <script>
+            function servicio(evt, opcion) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+            tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+            document.getElementById(opcion).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+            // Get the element with id="idServicio" and click on it
+            document.getElementById("idServicio").click();
+            </script>
+    </div>
+</body>
+</html>
