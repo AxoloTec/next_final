@@ -5,8 +5,8 @@ import '<EvaStilinski>/styles/Home.css'
 import '<EvaStilinski>/styles/YamlStatus.css'
 import '<EvaStilinski>/styles/Recalculation.css'
 import '<EvaStilinski>/styles/ConfigureYaml.css'
-import '<EvaStilinski>/styles/Settings.css'
 import '<EvaStilinski>/styles/Welcome.css'
+import '<EvaStilinski>/styles/Settings.css'
 
 
 export default function App({ Component, pageProps }) {

@@ -1,15 +1,16 @@
 import React from "react";
 import Menu from "../components/Menu";
+import Recalculation from "<EvaStilinski>/components/Recalculation";
 
 
 
 function Home1() {
     return (
         <div className="home-container">
-            <Menu />
-            <div className="pagina">
 
-                <h1>hiiii</h1>
+            <div className="pagina">
+                <Menu />
+                <Recalculation />
 
             </div>
         </div>

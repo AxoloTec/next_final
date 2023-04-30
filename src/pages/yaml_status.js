@@ -3,9 +3,16 @@ import Menu from "../components/Menu";
 import YamlStatus from "../components/YamlStatus";
 
 
+
 function Home2() {
     return (
-        <YamlStatus />
+        <div className="home-container">
+
+            <div className="item-container">
+                <Menu />
+                <YamlStatus />
+            </div>
+        </div>
     );
 }
 
