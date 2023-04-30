@@ -1,0 +1,49 @@
+button {
+    width: 135px;
+    height: 40px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    text-align: right;
+    padding: 5px;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.td2 {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1px;
+    font-size: 15px;
+}
+
+.th2 {
+    text-align: center;
+    padding: 7px;
+}
+
+.vertical-menu {
+    width: 200px;
+    height: 150px;
+    overflow-y: auto;
+    border: 1.5px solid black;
+}
+
+.w3-card-4 {
+    border: 1.5px solid black;
+}

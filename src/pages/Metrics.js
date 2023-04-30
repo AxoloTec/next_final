@@ -6,9 +6,9 @@ import Metrics from "../components/Metrics";
 function Home() {
     return (
         <div className="home-container">
-            <Menu />
-            <div className="pagina">
 
+            <div className="item-container">
+                <Menu />
                 <Metrics />
 
             </div>
