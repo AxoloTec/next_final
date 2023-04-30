@@ -1,15 +1,16 @@
 import React from "react";
 import Menu from "../components/Menu";
 import Welcome from "../components/Welcome";
+import Metrics from "../components/Metrics";
 
 
 function Home() {
   return (
     <div className="home-container">
-      <Menu />
-      <div className="pagina">
 
-        <Welcome />
+      <div className="item-container">
+        <Menu />
+        <Metrics />
 
       </div>
     </div>

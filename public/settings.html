@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        select {
+            width: 280px;
+            height: 40px;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        //Opciones
+        var OpcionYaml = {
+            "Front-end": {
+                "HTML": ["Links", "Images", "Tables", "Lists"],
+                "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+                "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+            },
+            "Back-end": {
+                "PHP": ["Variables", "Strings", "Arrays"],
+                "SQL": ["SELECT", "UPDATE", "DELETE"]
+            }
+        }
+        window.onload = function () {
+            var subjectSel = document.getElementById("subject");
+            var topicSel = document.getElementById("topic");
+            var chapterSel = document.getElementById("chapter");
+            for (var x in OpcionYaml) {
+                subjectSel.options[subjectSel.options.length] = new Option(x, x);
+            }
+            subjectSel.onchange = function () {
+                //empty Chapters- and Topics- dropdowns
+                chapterSel.length = 1;
+                topicSel.length = 1;
+                //display correct values
+                for (var y in OpcionYaml[this.value]) {
+                    topicSel.options[topicSel.options.length] = new Option(y, y);
+                }
+            }
+            topicSel.onchange = function () {
+                //empty Chapters dropdown
+                chapterSel.length = 1;
+                //display correct values
+                var z = OpcionYaml[subjectSel.value][this.value];
+                for (var i = 0; i < z.length; i++) {
+                    chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--Para el contenido de las opciones del menú -->
+    <div class="main">
+        <!--Contenido del METRIC LIST -->
+        <div id="Setting" class="tabcontent">
+            <h1>Setting</h1>
+            <hr>
+            <h2 align="center">Quarters per Update</h2>
+
+            <!--Boton de opciones-->
+            <select name="subject" id="Opcion 1" align="right">
+                <option value="" selected="selected">Select subject</option>
+            </select><br><br>
+
+            <h2 align="center">Times and Dates</h2>
+            <div class="flex-row">
+                <table style="width:100%">
+                    <tr>
+                        <th></th>
+                        <th style="width:100%">Day</th>
+                    </tr>
+                    <tr>
+                        <th><u>Time</u></th>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thrusday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    <tr>
+
+                        <th>1:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>2:00</th>
+                    </tr>
+                    <tr>
+                        <th>3:00</th>
+                    </tr>
+                    <tr>
+                        <th>4:00</th>
+                    </tr>
+                    <tr>
+                        <th>5:00</th>
+                    </tr>
+                    <tr>
+                        <th>6:00</th>
+                    </tr>
+                    <tr>
+                        <th>7:00</th>
+                    </tr>
+                    <tr>
+                        <th>8:00</th>
+                    </tr>
+                    <tr>
+                        <th>9:00</th>
+                    </tr>
+                    <tr>
+                        <th>10:00</th>
+                    </tr>
+                    <tr>
+                        <th>11:00</th>
+                    </tr>
+                    <tr>
+                        <th>12:00</th>
+                    </tr>
+                    <tr>
+                        <th>13:00</th>
+                    </tr>
+                    <tr>
+                        <th>14:00</th>
+                    </tr>
+                    <tr>
+                        <th>15:00</th>
+                    </tr>
+                    <tr>
+                        <th>16:00</th>
+                    </tr>
+                    <tr>
+                        <th>17:00</th>
+                    </tr>
+                    <tr>
+                        <th>18:00</th>
+                    </tr>
+                    <tr>
+                        <th>19:00</th>
+                    </tr>
+                    <tr>
+                        <th>20:00</th>
+                    </tr>
+                    <tr>
+                        <th>21:00</th>
+                    </tr>
+                    <tr>
+                        <th>22:00</th>
+                    </tr>
+                    <tr>
+                        <th>23:00</th>
+                    </tr>
+                    <tr>
+                        <th>00:00</th>
+                    </tr>
+
+                </table>
+                <input type="submit" value="Compare">
+            </div>
+
+</html>
