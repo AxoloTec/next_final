@@ -22,32 +22,47 @@ tr:nth-child(even) {
   flex-direction: row;
   justify-content: space-between;
 }
-/* Estilos */
-* {
-  box-sizing: border-box;
-}
-/*Agrega un color de fondo*/
-body {
-  font-family: Arial;
-  padding: 0px;
-  background: white;
- 
-}
-.boton{
-    width: 15px;
-    height: 30px;
 
+/*Para los botones del YAML seleccionado*/
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
 }
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.round {
+background-color: #04AA6D;
+  border-radius: 50%;
+}
+
+.th2{
+text-align: center;
+  padding: 8px;
+  border: 0px;
+}
+
+.flex-row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
 </style>
 <script>
     //Opciones
     var OpcionYaml = {
-    "Front-end": {
-        "HTML": ["Links", "Images", "Tables", "Lists"],
-        "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-        "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]    
+    "Otra opcion 1": {
+        "1": ["Links","Lists"],
+        "2": ["Borders", "Float"],
+        "JavaScript": ["Variables", "Conditions"]    
     },
-    "Back-end": {
+    "Otra opcion 2": {
         "PHP": ["Variables", "Strings", "Arrays"],
         "SQL": ["SELECT", "UPDATE", "DELETE"]
     }
@@ -80,47 +95,53 @@ body {
     }
 </script>
 </head>
-
 <body>
 <!--Para el contenido de las opciones del menú -->
     <div class="main">
 <!--Contenido del METRIC LIST -->
-        <div id="Recalculation" class="tabcontent"> 
-            <h1>Recalculation</h1><hr>
+        <div id="Comparison" class="tabcontent"> 
+            <h1>Comparison</h1><hr>
             
 
     <!-- AQUI DEBE DE IR LAS TABLAS-->
             <div class="flex-row">
-
     <!--Primer boton de opciones-->
                 <select name="subject" id="Opcion 1">
-                    <option value="" selected="selected">Select subject</option>
-                </select>
-    <!--Segunda boton de opciones-->
-                <select name="topic" id="Opcion 2">
-                    <option value="" selected="selected">Please select subject first</option>
-                </select>
-    <!--Tercer boton de opciones-->
-                <select name="chapter" id="Opcion 3">
-                    <option value="" selected="selected">Please select topic first</option>
-                </select>
-                <input type="submit" value="Recalculate">  
-                <a href="comparison.html"><input type="submit" value="Compare" class="boton"></input></a>
+                    <option value="" selected="selected">Opcion elegida</option>
+                </select><br><br>
+                <input type="submit" value="Replace Threshold">  
             </div>
-        
         </div> 
     <br>
+    
+<!--Botones de siguiente y anterior junto con el texto en el centro-->
+<div class="flex-row2">
+  <table style="width:30%">
+    <tr>
+      <th class="th2"><a href="#" class="previous round">&#8249;</a></th>
+      <th class="th2">Responsive Time</th>
+      <th class="th2"><a href="#" class="previous round">&#8249;</a></th>
+    </tr>   
+  </table>
+</div>
+<br>
+
+<h5 align="center">Titulo barra </h5>
+<div class="flex-row2">
+<img src="https://www.wikihow.com/images/3/39/Make-a-Line-Graph-in-Microsoft-Excel-Step-12-Version-2.jpg" height="100" width="290">
+</div>
+<br>
+<br>    
 <!--Titulo de las tablas-->
         <div class="flex-row">
-            <tittle style="width:30%">Response Time</tittle>
-            <tittle style="width:30%">Throughtput Rate</tittle>
-            <tittle style="width:30%">Failure Rate</tittle>
+            <tittle style="width:40%">Week x</tittle>
+            <tittle style="width:40%">Official Threshold</tittle>
         </div>
 
 <!-- AQUI DEBE DE IR LAS TABLAS-->
-        <div class="flex-row">
+      <div class="flex-row">
         <!--Primera tabla-->
-        <table style="width:30%">
+        <table style="width:40%">
         <tr>
             <th></th>
             <th>Green</th>
@@ -138,7 +159,7 @@ body {
         </tr>
         </table>
         <!--Segunda tabla-->
-        <table style="width:30%">
+        <table style="width:40%">
         <tr>
             <th></th>
             <th>Green</th>
@@ -155,25 +176,7 @@ body {
             <td>383.82</td>
         </tr>
         </table>
-        <!--Tercera tabla-->
-        <table style="width:30%">
-        <tr>
-            <th></th>
-            <th>Green</th>
-            <th>Red</th>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>0.05</td>
-            <td>0.05</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>0.1</td>
-            <td>0.1</td>
-        </tr>
-        </table>
-        </div>
+      </div>
 
     </div>
 </body>
