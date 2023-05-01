@@ -1,0 +1,54 @@
+<<<<<<< Updated upstream
+=======
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.vertical-menu-status {
+    width: 1000px;
+    height: 120px;
+    overflow-y: auto;
+    border: 1.5px solid black;
+}
+
+th {
+    background-color: #6C6965;
+    text-align: center;
+    padding: 8px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tabcontent-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.item-container-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+>>>>>>> Stashed changes

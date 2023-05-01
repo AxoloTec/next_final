@@ -1,0 +1,28 @@
+<<<<<<< Updated upstream
+=======
+.flex-row-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+select {
+    width: 280px;
+    height: 40px;
+    justify-content: center;
+}
+
+.upper-tab-settings {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+>>>>>>> Stashed changes
