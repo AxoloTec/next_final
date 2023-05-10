@@ -1,18 +1,19 @@
-
 import React from "react";
 import Menu from "../components/Menu";
-import YamlStatus from "<EvaStilinski>/components/YamlStatus";
+import Comparison from "../components/Comparison";
 
 
-export default function Home() {
+function Home() {
     return (
         <div className="home-container">
 
-            <div className="item-container-status">
+            <div className="item-container">
                 <Menu />
-                <YamlStatus />
+                <Comparison />
 
             </div>
         </div>
     );
 }
+
+export default Home;

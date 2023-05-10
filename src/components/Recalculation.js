@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import React from "react";
 
 
@@ -7,40 +7,48 @@ export default function Recalculation() {
         <div>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             {/*Para el contenido de las opciones del menú */}
-            <div className="main">
+            <div class="main">
                 {/*Contenido del METRIC LIST */}
-                <div id="Recalculation" className="tabcontent">
+                <div id="Recalculation" className="tabcontent-recalculation">
                     <h1>Recalculation</h1>
                     <hr />
+                    <br />
                     {/* AQUI DEBE DE IR LAS TABLAS*/}
-                    <div className="flex-row">
+                    <div class="flex-rowRecalculation">
                         {/*Primer boton de opciones*/}
-                        <select name="subject" id="Opcion 1">
-                            <option value selected="selected">Select subject</option>
+                        <select name="subject" id="Opcion 1" style={{ width: '25%' }}>
+                            <option value selected="selected">Select method</option>
+                            <option > SERVICE_METHOD-60BE1ACE9F360BE5</option>
                         </select><br /><br />
                         {/*Segunda boton de opciones*/}
                         <select name="topic" id="Opcion 2">
-                            <option value selected="selected">Please select subject first</option>
+                            <option value selected="selected">Week</option>
+                            <option > Week 1</option>
+
                         </select><br /><br />
                         {/*Tercer boton de opciones*/}
                         <select name="chapter" id="Opcion 3">
-                            <option value selected="selected">Please select topic first</option>
+                            <option value selected="selected">Deviation criteria</option>
+                            <option > 8° Quartils</option>
+
                         </select><br /><br />
-                        <input type="submit" defaultValue="Recalculate" />
-                        <input type="submit" defaultValue="Compare" />
+                        <button type="submit" class="inputRecalculation" style={{ width: '10%' }} onClick={() => window.location.reload(false)} content="1"> Recalculate </button>
+
+                        <button type="submit" class="inputRecalculation" style={{ width: '10%' }}><Link href="/comparison"> Compare</Link>
+                        </button>
                     </div>
                 </div>
                 <br />
                 {/*Titulo de las tablas*/}
-                <div className="flex-row">
+                <div class="flex-rowRecalculation">
                     <tittle style={{ width: '30%' }}>Response Time</tittle>
                     <tittle style={{ width: '30%' }}>Throughtput Rate</tittle>
                     <tittle style={{ width: '30%' }}>Failure Rate</tittle>
                 </div>
                 {/* AQUI DEBE DE IR LAS TABLAS*/}
-                <div className="flex-row">
+                <div class="flex-rowRecalculation">
                     {/*Primera tabla*/}
-                    <table style={{ width: '30%' }}>
+                    <table class="tableRecalculation" style={{ width: '30%' }}>
                         <tbody><tr>
                             <th />
                             <th>Green</th>
@@ -58,7 +66,7 @@ export default function Recalculation() {
                             </tr>
                         </tbody></table>
                     {/*Segunda tabla*/}
-                    <table style={{ width: '30%' }}>
+                    <table class="tableRecalculation" style={{ width: '30%' }}>
                         <tbody><tr>
                             <th />
                             <th>Green</th>
@@ -76,7 +84,7 @@ export default function Recalculation() {
                             </tr>
                         </tbody></table>
                     {/*Tercera tabla*/}
-                    <table style={{ width: '30%' }}>
+                    <table class="tableRecalculation" style={{ width: '30%' }}>
                         <tbody><tr>
                             <th />
                             <th>Green</th>

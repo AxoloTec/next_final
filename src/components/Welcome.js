@@ -5,8 +5,8 @@ export default function Welcome() {
     return (
 
 
-        <div>
-            <Menu />
+        <div className="main">
+
             <div className="pagina">
                 <h1>WELCOME TO:
                     <br />

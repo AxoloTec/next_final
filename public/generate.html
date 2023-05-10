@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    button {
+        width: 135px;
+        height: 40px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    th {
+        text-align: left;
+        padding: 8px;
+    }
+
+    td {
+        text-align: right;
+        padding: 5px;
+    }
+
+    .table2 {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .td2 {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 1px;
+        font-size: 15px;
+    }
+
+    .th2 {
+        text-align: center;
+        padding: 7px;
+    }
+
+    .vertical-menu {
+        width: 200px;
+        height: 150px;
+        overflow-y: auto;
+        border: 1.5px solid black;
+    }
+
+    .w3-card-4 {
+        border: 1.5px solid black;
+    }
+</style>
+<script>
+    //Opciones
+    var OpcionYaml = {
+        "Front-end": {
+            "HTML": ["Links", "Images", "Tables", "Lists"],
+            "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+            "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+        },
+        "Back-end": {
+            "PHP": ["Variables", "Strings", "Arrays"],
+            "SQL": ["SELECT", "UPDATE", "DELETE"]
+        }
+    }
+    window.onload = function () {
+        var subjectSel = document.getElementById("subject");
+        var topicSel = document.getElementById("topic");
+        var chapterSel = document.getElementById("chapter");
+        for (var x in OpcionYaml) {
+            subjectSel.options[subjectSel.options.length] = new Option(x, x);
+        }
+        subjectSel.onchange = function () {
+            //empty Chapters- and Topics- dropdowns
+            chapterSel.length = 1;
+            topicSel.length = 1;
+            //display correct values
+            for (var y in OpcionYaml[this.value]) {
+                topicSel.options[topicSel.options.length] = new Option(y, y);
+            }
+        }
+        topicSel.onchange = function () {
+            //empty Chapters dropdown
+            chapterSel.length = 1;
+            //display correct values
+            var z = OpcionYaml[subjectSel.value][this.value];
+            for (var i = 0; i < z.length; i++) {
+                chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+            }
+        }
+    }
+</script>
+
+
+<body>
+    <!--Para el contenido de las opciones del menú -->
+    <div class="main">
+        <!--Contenido del METRIC LIST -->
+        <div id="GenerateReport" class="tabcontent">
+            <h1>Generate Report</h1>
+            <hr>
+            <div class="flex-row">
+                <!-- Tarjeta servicios-->
+                <div class="vertical-menu" style="width:45%;">
+                    <table class="table2">
+                        <tr>
+                            <th class="th2"> Service ID</th>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 4</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 5</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2"><input type="checkbox" id="cbox2" value="second_checkbox"> Service 6</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+                <!--Tarjeta para enviar YAML-->
+                <div class="w3-card-4" style="width:53%;">
+
+                    <!--Para el titulo y el boton de la tabla de envio-->
+                    <div class="flex-row">
+                        <h3>Report</h3>
+                        <button type="submit" value="Compare"> Add New</button>
+                    </div>
+                    <hr>
+                    <table>
+                        <!--Primera columna-->
+                        <tr>
+                            <th>File Name: </th>
+                            <td>
+                                <select>
+                                    <option value="" selected="selected" id=Opcion 1>Select subject</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!--Segunda columna-->
+                        <tr>
+                            <th>Email: </th>
+                            <td> ""</td>
+                        </tr>
+                        <!--Tercera columna-->
+                        <tr>
+                            <th>From </th>
+                            <td><input></input></td>
+                        </tr>
+
+                        <!--Cuarta columna-->
+                        <tr>
+                            <th>To </th>
+                            <td><input></input></td>
+                        </tr>
+                        <!--Quinta columna-->
+                        <tr>
+                            <th>Schedule: </th>
+                            <td><input></input></td>
+                        </tr>
+
+                        <!--Sexta columna-->
+                        <tr>
+                            <th>Service ID </th>
+                            <td style="border: 1px solid #dddddd">Uno</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" value="Compare"> Save Changes</button>
+    </div>
+</body>
+
+</html>

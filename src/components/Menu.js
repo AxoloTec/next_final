@@ -13,7 +13,7 @@ export default function Menu() {
                         <h5><i>Metrics Threshold Calculator</i></h5>
                         <div class="tab">
                             <Link href="/">
-                                <button class="tablinks" onclick="openCity(event, 'MetricsList')">
+                                <button class="tablinks" onclick="openCity(event, 'MetricsList')" id="defaultOpen">
                                     <img class='stats' src='stats.png' height="25" width="25" align='left'></img>Metrics List</button></Link>
                             <br></br>
                             <Link href="/recalculation">

@@ -1,8 +1,12 @@
-.flex-row {
+.flex-row-settings {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding: 6px 12px;
+
 }
+
+
 
 table,
 th,
@@ -15,4 +19,12 @@ select {
     width: 280px;
     height: 40px;
     justify-content: center;
+}
+
+.upper-tab-settings {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+
 }

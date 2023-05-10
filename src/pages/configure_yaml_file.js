@@ -4,10 +4,9 @@ import ConfigureFile from "<EvaStilinski>/components/ConfigureFile";
 
 
 
-function Home1() {
+function Home() {
     return (
         <div className="home-container">
-
             <div className="pagina">
                 <Menu />
                 <ConfigureFile />
@@ -17,4 +16,4 @@ function Home1() {
     );
 }
 
-export default Home1;
+export default Home;

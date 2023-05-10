@@ -1,7 +1,9 @@
-table {
+.tableRecalculation {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    padding: 6px 12px;
+
 }
 
 td,
@@ -15,8 +17,25 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.flex-row {
+.flex-rowRecalculation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: #0c0c0c;
+}
+
+
+.inputRecalculation {
+    border: 1.5px solid #0c0c0c;
+    text-align: center;
+    height: 40px;
+}
+
+.tabcontent-recalculation {
+    padding: 6px 12px;
+
+}
+
+.flex-rowRecalculation {
+    padding: 6px 12px;
 }

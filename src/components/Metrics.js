@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
+import Link from "next/link";
+
 
 export default function MetricsList() {
     const [selectedSubject, setSelectedSubject] = useState('');
@@ -26,40 +28,40 @@ export default function MetricsList() {
     };
 
     return (
-        <div className="main">
-            <div className="tabcontent" id="MetricsList">
+        <div class="main">
+            <div id="MetricsList" class="tabcontentMetric" >
                 <h1>Metric List</h1>
                 <hr />
+                <br />
                 <select name="subject" id="subject" value={selectedSubject} onChange={handleSubjectChange}>
+                    <option value="selected">SERVICE_METHOD-60BE1ACE9F360BE5</option>
                     <option value="">Select the service method</option>
+
                     {Object.keys(OpcionYaml).map((key) => (
                         <option key={key} value={key}>
                             {key}
                         </option>
-                    ))}
+                    )
+                    )
+                    }
                 </select>
                 <br />
                 <br />
-                <br />
-                <div className="flex-row">
-                    <img
-                        className='img'
-                        src="https://www.wikihow.com/images/3/39/Make-a-Line-Graph-in-Microsoft-Excel-Step-12-Version-2.jpg"
-                        height="180"
-                        width="290"
-                        align="center"
+
+                <div class="flex-rowMetric">
+                    <img src="graphmetrics.png" height="20px" width="700px" alt="grafica"
                     />
-                    <div className="vertical-menu">
-                        <table className="table2">
+                    <div class="vertical-menuMetric">
+                        <table class="table2Metric">
                             <thead>
                                 <tr>
-                                    <th className="th2">Week 1</th>
+                                    <th class="th2Metric">Week 1</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'].map((week) => (
                                     <tr key={week}>
-                                        <td className="td2">
+                                        <td class="td2Metric">
                                             <input type="checkbox" id={week} value={week} />
                                             <label htmlFor={week}>{week}</label>
                                         </td>
@@ -73,16 +75,30 @@ export default function MetricsList() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Titulo</th>
-                            <th>bla bla bla</th>
+                            <th>Week in which it was calculated</th>
+                            <th>Date range</th>
                             <th>Offical</th>
+                            <th> </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Jess</td>
-                            <td>es la</td>
-                            <td>best</td>
+                            <td>Week 1</td>
+                            <td>January 1–Sunday, January 7, 2023</td>
+                            <td><i>False </i></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Week 2</td>
+                            <td>January 8–Sunday, January 14, 2023</td>
+                            <td><i>False </i></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Week 3</td>
+                            <td>January 15–Sunday, January 21, 2023</td>
+                            <td><i>False </i></td>
+                            <td className='td-recalculate'><Link href="/recalculation"><button>Recalculation</button></Link></td>
                         </tr>
                     </tbody>
                 </table>
